@@ -73,8 +73,10 @@ USE_TZ = True
 # Arquivos estáticos
 STATIC_URL = 'static/'
 
-# Se você criar a pasta 'static', adicione-a aqui
-# STATICFILES_DIRS = [BASE_DIR / 'static']  # Descomente quando a pasta 'static' for criada
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'app' / 'static',  # Aponta para a pasta app/static
+]
 
 # Campo de chave primária
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
