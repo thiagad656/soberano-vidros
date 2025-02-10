@@ -1,7 +1,20 @@
-body {
-    background-color: #f8f9fa;
+/* Garantir que o body ocupe toda a altura da janela */
+html, body {
+    height: 100%;
+    margin: 0;
 }
 
-h1 {
-    color: #007bff;
+/* Forçar o conteúdo da página a ocupar o espaço restante */
+main {
+    min-height: calc(100vh - 56px); /* Ajuste a altura conforme necessário para o seu cabeçalho */
+}
+
+/* Estilos do footer */
+footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }

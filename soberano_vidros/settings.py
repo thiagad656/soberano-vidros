@@ -70,13 +70,17 @@ TIME_ZONE = 'America/Sao_Paulo'
 USE_I18N = True
 USE_TZ = True
 
-# Arquivos estáticos
-STATIC_URL = 'static/'
-
+# Caminho da URL para arquivos estáticos
 STATIC_URL = '/static/'
+
+# Diretórios onde o Django buscará arquivos estáticos no desenvolvimento
 STATICFILES_DIRS = [
     BASE_DIR / 'app' / 'static',  # Aponta para a pasta app/static
 ]
+
+# Diretório onde o Django coletará os arquivos estáticos para produção
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 
 # Campo de chave primária
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
