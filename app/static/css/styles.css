@@ -1,20 +1,21 @@
-/* Garantir que o body ocupe toda a altura da janela */
 html, body {
     height: 100%;
     margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Forçar o conteúdo da página a ocupar o espaço restante */
-main {
-    min-height: calc(100vh - 56px); /* Ajuste a altura conforme necessário para o seu cabeçalho */
+.content {
+    flex: 1; /* Faz o conteúdo ocupar todo o espaço disponível */
 }
 
-/* Estilos do footer */
 footer {
-    background-color: #f8f9fa;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-    bottom: 0;
     width: 100%;
+    background-color: #212529; /* Mantém o estilo do Bootstrap */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    border: none;
+    margin-top: auto; /* Faz o footer ir para o final */
 }

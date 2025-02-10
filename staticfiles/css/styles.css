@@ -1,0 +1,24 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh; /* Garante que o corpo da página ocupe pelo menos toda a tela */
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1; /* Faz com que o conteúdo ocupe o espaço disponível */
+}
+
+footer {
+    width: 100%;
+    position: relative; /* Se ainda ficar desalinhado, tente 'absolute' ou 'fixed' */
+    bottom: 0;
+    left: 0;
+    background-color: #212529; /* Mantém a cor do Bootstrap (bg-dark) */
+    padding: 10px 0;
+    text-align: center;
+    border: none; /* Remove qualquer borda */
+    box-shadow: none; /* Remove qualquer sombra que pareça uma borda */
+}
