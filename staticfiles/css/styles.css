@@ -1,24 +1,43 @@
 html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    width: 100%;
-    min-height: 100vh; /* Garante que o corpo da página ocupe pelo menos toda a tela */
     display: flex;
     flex-direction: column;
 }
 
 .content {
-    flex: 1; /* Faz com que o conteúdo ocupe o espaço disponível */
+    flex: 1; /* Faz o conteúdo ocupar todo o espaço disponível */
 }
 
 footer {
     width: 100%;
-    position: relative; /* Se ainda ficar desalinhado, tente 'absolute' ou 'fixed' */
-    bottom: 0;
-    left: 0;
-    background-color: #212529; /* Mantém a cor do Bootstrap (bg-dark) */
-    padding: 10px 0;
+    background-color: #212529; /* Mantém o estilo do Bootstrap */
+    color: white;
     text-align: center;
-    border: none; /* Remove qualquer borda */
-    box-shadow: none; /* Remove qualquer sombra que pareça uma borda */
+    padding: 10px 0;
+    border: none;
+    margin-top: auto; /* Faz o footer ir para o final */
+}
+
+.hero {
+    background: url('/static/img/Banner.jpeg') no-repeat center center/cover;
+    height: 80vh; /* Ajuste a altura do banner */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(3, 0, 153);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5); /* Leve escurecimento para melhor leitura */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero a {
+    margin-top: 15px;
 }

@@ -19,3 +19,25 @@ footer {
     border: none;
     margin-top: auto; /* Faz o footer ir para o final */
 }
+
+.hero {
+    background: url('/static/img/Banner.jpeg') no-repeat center center/cover;
+    height: 80vh; /* Ajuste a altura do banner */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(3, 0, 153);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5); /* Leve escurecimento para melhor leitura */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero a {
+    margin-top: 15px;
+}
