@@ -41,3 +41,61 @@ footer {
 .hero a {
     margin-top: 15px;
 }
+
+.navbar-brand {
+    margin-left: 10px; /* Ajusta o logo para a esquerda */
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center; /* Alinha os itens com o logo */
+}
+
+.custom-nav-link {
+    color: yellow !important; /* Texto amarelo */
+    font-weight: bold;
+    margin-left: 15px; /* Espaçamento entre os itens */
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out;
+}
+
+.custom-nav-link:hover {
+    color: white !important;
+}
+
+/* Ajuste para o menu responsivo */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: linear-gradient(90deg, rgba(0,0,0,1) 34%, rgba(0,20,80,1) 60%, rgba(0,80,125,1) 80%, rgba(0,145,255,1) 100%) !important;
+        padding: 10px;
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Empilha os itens no mobile */
+        align-items: flex-start; /* Alinha os itens à esquerda */
+        margin-left: 10px; /* Ajusta o espaço à esquerda */
+    }
+
+    .custom-nav-link {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+    .navbar-toggler {
+        border: none; /* Remove a borda do botão */
+        background: transparent; /* Remove o fundo do botão */
+        padding: 0; /* Remove o padding extra */
+    }
+
+    .navbar-toggler i {
+        color: yellow; /* Definir a cor do ícone */
+        font-size: 30px; /* Ajustar o tamanho do ícone */
+        transition: color 0.3s ease; /* Efeito suave para mudança de cor, se necessário */
+    }
+
+    /* Quando o botão de toggle for ativo (menu expandido) */
+    .navbar-toggler.collapsed i {
+        color: yellow; /* Cor do ícone quando o menu está colapsado */
+    }
+
