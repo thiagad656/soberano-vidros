@@ -4,3 +4,4 @@ python manage.py collectstatic
 
 python manage.py runserver
 
+mapa pequeno soberano: <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.440045059118!2d-46.894189!3d-23.480654499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03330bc4f83d%3A0xb3f52c31cc9c9aa6!2sSoberano%20Vidros%20Ltda-ME!5e0!3m2!1spt-BR!2sbr!4v1742212641446!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
