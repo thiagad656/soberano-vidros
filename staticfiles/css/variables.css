@@ -1,0 +1,8 @@
+/* Variáveis Globais */
+:root {
+    --font-weight-light: 200;
+    --nav-bg-start: rgba(0, 0, 0, 1);
+    --nav-bg-end: rgba(0, 145, 255, 1);
+    --transition-speed: 0.3s;
+    --border-radius: 8px;
+  }

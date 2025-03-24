@@ -1,4 +1,5 @@
 from pathlib import Path
+import os
 
 # Caminho base do projeto
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -16,7 +17,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app',  # Adicionei a app ao INSTALLED_APPS
+    'app', 
 ]
 
 # Middleware

@@ -1,0 +1,88 @@
+  /* Botão Personalizado NAVBAR (Outline) */
+  .custom-btn-outline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: transparent;
+    border: 2px solid rgb(255, 255, 0);
+    color: rgb(255, 255, 0);
+    font-weight: var(--font-weight-light);
+    padding: 12px 16px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-size: 18px;
+    transition: all var(--transition-speed) ease;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform: scale(1);
+    will-change: transform;
+    margin: 10px auto;
+    box-sizing: border-box;
+  }
+  
+  .custom-btn-outline i {
+    font-size: 20px;
+  }
+  
+  .custom-btn-outline:hover {
+    background-color: rgb(255, 255, 0);
+    color: rgb(0, 20, 80, 1);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 255, 0, 0.3);
+  }
+
+  /* Botão Personalizado MAIN (Preenchido) */
+.custom-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: rgb(255, 255, 0); /* Cor de fundo preenchida */
+    border: 2px solid rgb(255, 255, 0); /* Mantendo a borda com a mesma cor */
+    color: rgb(0, 20, 80, 1); /* Cor do texto */
+    font-weight: var(--font-weight-light);
+    padding: 12px 16px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-size: 20px;
+    transition: all var(--transition-speed) ease;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform: scale(1);
+    will-change: transform;
+    margin: 10px auto;
+    box-sizing: border-box;
+  }
+  
+  .custom-btn i {
+    font-size: 20px;
+  }
+  
+  .custom-btn:hover {
+    background-color: rgb(
+      230,
+      230,
+      0
+    ); /*mudando a cor do hover para uma cor mais escura do que o fundo original, para dar um efeito de clique*/
+    color: rgb(0, 20, 80, 1);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 255, 0, 0.3);
+  }
+  
+  /* Container do botão */
+  .btn-container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
