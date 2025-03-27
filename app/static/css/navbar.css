@@ -4,46 +4,50 @@
 
 /* Navbar Base */
 .navbar {
-    font-family: "Helvetica Neue", "Nunito Sans", sans-serif;
-    font-weight: var(--font-weight-light);
-    background: linear-gradient(
-      90deg,
-      var(--nav-bg-start) 34%,
-      rgba(0, 20, 80, 1) 60%,
-      rgba(0, 80, 125, 1) 80%,
-      var(--nav-bg-end) 100%
-    );
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    height: auto;
-    min-height: 70px;
-  }
-  
-  .navbar-brand {
-    margin-left: 10px;
-  }
-  
-  .navbar-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 0 20px;
-  }
-  
-  /* Links de Navegação */
-  .custom-nav-link {
-    color: yellow;
-    font-weight: var(--font-weight-light);
-    margin-left: 15px;
-    text-transform: uppercase;
-    transition: color var(--transition-speed) ease-in-out;
-  }
-  
-  .custom-nav-link:hover {
-    color: white;
-  }
+  font-family: "Helvetica Neue", "Nunito Sans", sans-serif;
+  font-weight: var(--font-weight-light);
+  background: linear-gradient(
+    90deg,
+    var(--nav-bg-start) 34%,
+    rgba(0, 20, 80, 1) 60%,
+    rgba(0, 80, 125, 1) 80%,
+    var(--nav-bg-end) 100%
+  );
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: auto;
+  min-height: 70px;
+}
+
+.navbar-brand {
+  margin-left: 10px;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+/* ==========================================================================  
+   Navbar - Links
+   ========================================================================== */
+
+.custom-nav-link {
+  color: grey !important; /* Branco por padrão */
+  font-weight: var(--font-weight-light);
+  margin-left: 15px;
+  text-transform: uppercase;
+  transition: color var(--transition-speed) ease-in-out;
+  text-decoration: none; /* Remove o sublinhado */
+}
+
+.custom-nav-link:hover {
+  color: yellow !important; /* Amarelo no hover */
+}
