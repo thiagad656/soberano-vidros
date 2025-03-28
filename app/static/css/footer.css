@@ -1,21 +1,61 @@
-/* ==========================================================================  
-   Footer
-   ========================================================================== */
+.custom-footer {
+    background-color: black;
+    color: gray;
+    padding: 40px 0;
+    text-align: center;
+    font-family: "Helvetica Neue", "Nunito Sans", sans-serif;
+    font-weight: 300;
+}
 
-   .footer {
-      background-color: #000; /* Fundo preto */
-      color: grey; /* Texto amarelo */
-      text-align: center;
-      padding: 20px 0;
-      font-size: 14px;
-      position: relative;
-      width: 100%;
-      bottom: 0;
-  }
-  
-  .footer .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-  }
-  
+.custom-footer .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.custom-footer h5 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.custom-footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.custom-footer ul li {
+    margin-bottom: 10px;
+}
+
+.custom-footer ul li a {
+    color: gray;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.custom-footer ul li a:hover {
+    color: yellow;
+}
+
+.social-links i {
+    margin-right: 8px;
+}
+
+/* Direitos Autorais */
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 15px;
+    font-size: 14px;
+}
+
+.footer-bottom a {
+    color: yellow;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+    color: yellow;
+}
