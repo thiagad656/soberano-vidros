@@ -1,41 +1,35 @@
-  /* Botão Personalizado NAVBAR (Outline) */
-  .custom-btn-outline {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    background-color: transparent;
-    border: 2px solid rgb(255, 255, 0);
-    color: rgb(255, 255, 0);
-    font-weight: var(--font-weight-light);
-    padding: 12px 16px;
-    border-radius: var(--border-radius);
-    text-decoration: none;
-    font-size: 18px;
-    transition: all var(--transition-speed) ease;
-    width: 90%;
-    max-width: 400px;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    transform: scale(1);
-    will-change: transform;
-    margin: 10px auto;
-    box-sizing: border-box;
-  }
-  
-  .custom-btn-outline i {
-    font-size: 20px;
-  }
-  
-  .custom-btn-outline:hover {
-    background-color: rgb(255, 255, 0);
-    color: rgb(0, 20, 80, 1);
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(255, 255, 0, 0.3);
-  }
+.custom-btn-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: rgb(255, 255, 0); /* Fundo sólido amarelo */
+  border: none; /* Remove a borda */
+  color: rgb(0, 20, 80); /* Texto azul-escuro */
+  font-weight: 400;
+  padding: 14px 24px; /* Aumenta o tamanho */
+  border-radius: 5px; /* Bordas arredondadas suaves */
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  width: 100%; /* Ocupa toda a largura disponível */
+  max-width: 500px; /* Limita a largura máxima */
+  text-align: center;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
 
+/* Ícone dentro do botão */
+.custom-btn-navbar i {
+  font-size: 20px;
+}
+
+/* Efeito hover */
+.custom-btn-navbar:hover {
+  background-color: rgb(230, 230, 0); /* Tom de amarelo um pouco mais escuro */
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 255, 0, 0.3);
+}
   /* Botão Personalizado MAIN (Preenchido) */
 .custom-btn {
     display: flex;
@@ -45,7 +39,7 @@
     background-color: rgb(255, 255, 0); /* Cor de fundo preenchida */
     border: 2px solid rgb(255, 255, 0); /* Mantendo a borda com a mesma cor */
     color: rgb(0, 20, 80, 1); /* Cor do texto */
-    font-weight: var(--font-weight-light);
+    font-weight: 400;
     padding: 12px 16px;
     border-radius: var(--border-radius);
     text-decoration: none;
@@ -61,6 +55,7 @@
     will-change: transform;
     margin: 10px auto;
     box-sizing: border-box;
+    text-shadow: none;
   }
   
   .custom-btn i {

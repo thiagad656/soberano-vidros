@@ -2,6 +2,14 @@
    Main
    ========================================================================== */
 
+
+/* Ajuste de margens laterais */
+.container-fluid {
+  max-width: 1800px; /* Aumenta a largura do conteúdo */
+  margin: 0 auto; /* Centraliza */
+  padding: 0 5px; /* Reduz o espaço nas laterais */
+}
+
 /* Seção Hero */
 .hero {
   background: url("/static/img/Banner.jpeg") no-repeat center center/cover;

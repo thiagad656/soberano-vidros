@@ -1,0 +1,54 @@
+/* Estilizando a seção Sobre Nós */
+.sobre-nos {
+    background-color: darkblue; /* Cor de fundo suave */
+    padding: 60px 20px;
+    margin-top: 60px; /* Para dar espaço após a navbar */
+}
+
+.sobre-nos h2 {
+    font-size: 2.5rem;
+    color: yellow; /* Cor principal do texto */
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.sobre-nos h3 {
+    font-size: 2rem;
+    color: yellow; /* Cor dos subtítulos */
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.sobre-nos p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.sobre-nos .container {
+    max-width: 1200px; /* Largura máxima para a seção */
+    margin: 0 auto; /* Alinha o conteúdo no centro */
+}
+
+.sobre-nos .row {
+    margin-bottom: 40px;
+}
+
+.sobre-nos .col-md-6 {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .sobre-nos h2 {
+        font-size: 2rem; /* Tamanho menor em telas pequenas */
+    }
+
+    .sobre-nos h3 {
+        font-size: 1.6rem; /* Tamanho menor em telas pequenas */
+    }
+
+    .sobre-nos p {
+        font-size: 1rem; /* Tamanho menor em telas pequenas */
+    }
+}
