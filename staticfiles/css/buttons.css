@@ -8,7 +8,7 @@
   color: rgb(0, 20, 80); /* Texto azul-escuro */
   font-weight: 400;
   padding: 14px 24px; /* Aumenta o tamanho */
-  border-radius: 5px; /* Bordas arredondadas suaves */
+  border-radius: 0px; /* Bordas arredondadas suaves */
   text-decoration: none;
   font-size: 18px;
   transition: all 0.3s ease;
@@ -43,10 +43,10 @@
     padding: 12px 16px;
     border-radius: var(--border-radius);
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     transition: all var(--transition-speed) ease;
     width: 90%;
-    max-width: 400px;
+    max-width: 500px;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;

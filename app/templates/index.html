@@ -1,54 +1,101 @@
-{% extends 'main.html' %}
-{% load static %}
+{% extends 'main.html' %} {% load static %} {% block content %}
 
-{% block content %}
 <section class="hero">
-    <div class="hero-content text-center">
-        <h1 class="display-4">Bem-vindo à Soberano Vidros</h1>
-        <p class="lead">Refletindo Qualidade!</p>
-        <a href="https://api.whatsapp.com/send?phone=5511932247451" target="_blank" rel="noopener" class="custom-btn">
-            <i class="fa-brands fa-whatsapp"></i> Solicite seu orçamento!
-        </a>
-    </div>
+  <div class="hero-content text-center">
+    <h1 class="display-4">Bem-vindo à Soberano Vidros</h1>
+    <p class="lead">Refletindo Qualidade!</p>
+    <a
+      href="https://api.whatsapp.com/send?phone=5511932247451"
+      target="_blank"
+      rel="noopener"
+      class="custom-btn"
+    >
+      <i class="fa-brands fa-whatsapp"></i> Solicite seu orçamento!
+    </a>
+  </div>
 </section>
 
 <section id="sobre-nos" class="sobre-nos">
-    <div class="container">
-        <h2 class="section-title text-center">Quem Somos</h2>
+  <div class="container">
+    <h2 class="section-title text-center">Quem Somos</h2>
 
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <p>
-                    Há 8 anos no mercado, a Soberano Vidros se destaca pela qualidade e compromisso com o atendimento. Trabalhamos com matéria-prima de alto padrão, equipamentos modernos e mão de obra especializada para garantir a satisfação total dos nossos clientes.
-                </p>
-                <p>
-                    Pontualidade é um dos nossos principais valores, demonstrando estabilidade, integridade e respeito por nossos clientes e parceiros. Investimos constantemente em tecnologia e capacitação para oferecer soluções ágeis e seguras em qualquer projeto.
-                </p>
-            </div>
-        </div>
-
-        <!-- As caixas suspensas ficam abaixo da seção "Quem Somos" -->
-        <div class="row mt-5">
-            <div class="col-lg-4 col-md-6">
-                <div class="info-box">
-                    <h3>Nossa Equipe</h3>
-                    <p>Profissionais altamente qualificados, preparados para oferecer o melhor atendimento e garantir a excelência dos serviços prestados.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="info-box">
-                    <h3>Missão</h3>
-                    <p>Superar expectativas com atendimento personalizado e produtos de alta qualidade, contribuindo para o bem-estar dos nossos clientes e colaboradores.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-12">
-                <div class="info-box">
-                    <h3>Compromisso</h3>
-                    <p>Excelência no atendimento, inovação constante e busca pela perfeição na qualidade dos nossos produtos.</p>
-                </div>
-            </div>
-        </div>
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <p>
+          Há 8 anos no mercado, a Soberano Vidros se destaca pela qualidade e
+          compromisso com o atendimento. Trabalhamos com matéria-prima de alto
+          padrão, equipamentos modernos e mão de obra especializada para
+          garantir a satisfação total dos nossos clientes.
+        </p>
+        <p>
+          Pontualidade é um dos nossos principais valores, demonstrando
+          estabilidade, integridade e respeito por nossos clientes e parceiros.
+          Investimos constantemente em tecnologia e capacitação para oferecer
+          soluções ágeis e seguras em qualquer projeto.
+        </p>
+      </div>
     </div>
+
+    <!-- As caixas suspensas ficam abaixo da seção "Quem Somos" -->
+    <div class="row mt-5">
+      <div class="col-lg-4 col-md-6">
+        <div class="info-box">
+          <h3>Nossa Equipe</h3>
+          <p>
+            Profissionais altamente qualificados, preparados para oferecer o
+            melhor atendimento e garantir a excelência dos serviços prestados.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="info-box">
+          <h3>Missão</h3>
+          <p>
+            Superar expectativas com atendimento personalizado e produtos de
+            alta qualidade, contribuindo para o bem-estar dos nossos clientes e
+            colaboradores.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12">
+        <div class="info-box">
+          <h3>Compromisso</h3>
+          <p>
+            Excelência no atendimento, inovação constante e busca pela perfeição
+            na qualidade dos nossos produtos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="galeria" class="galeria-section">
+  <div class="container-fluid flex-grow-1 px-0">
+    <div class="row align-items-stretch h-100 gx-0">
+      <div class="col-md-6 galeria-descricao">
+        <h2>Galeria</h2>
+        <p>
+          Na Soberano Vidros, aplicamos o mesmo compromisso com excelência e
+          atenção aos detalhes em cada projeto. Nossa galeria apresenta soluções
+          únicas em vidraçaria e estruturas de alumínio, que refletem nossa
+          dedicação à modernidade, segurança e alto padrão. Explore os
+          resultados do nosso trabalho, feitos para superar expectativas e
+          trazer beleza e funcionalidade a qualquer ambiente.
+        </p>
+      </div>
+
+      <div class="col-md-6 galeria-slideshow">
+        <div class="slideshow-background"></div>
+        <div class="overlay"></div>
+        <div class="galeria-btn-wrapper">
+          <a href="{% url 'galeria' %}" class="btn btn-outline-light btn-lg"
+            >Veja a Galeria!</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 {% endblock %}

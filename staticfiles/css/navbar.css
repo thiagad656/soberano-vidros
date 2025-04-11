@@ -9,7 +9,7 @@
   background: linear-gradient(
     90deg,
     var(--nav-bg-start) 34%,
-    rgba(0, 20, 80, 1) 60%,
+    #001450 60%,
     rgba(0, 80, 125, 1) 80%,
     var(--nav-bg-end) 100%
   );

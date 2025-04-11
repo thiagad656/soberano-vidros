@@ -1,0 +1,101 @@
+/* Container geral da galeria */
+.galeria-section {
+    background: linear-gradient(to bottom, ghostwhite, #06133a); /* branco fantasma para azul escuro */
+    padding: 80px 5%;
+}
+
+.container-galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+/* Descrição do lado esquerdo */
+.descricao-galeria {
+    flex: 1;
+    min-width: 300px;
+    color: #06133a;
+    padding-right: 30px;
+}
+
+.descricao-galeria h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: yellow;
+}
+
+.descricao-galeria p {
+    font-size: 1.5rem;
+    color: #000;
+}
+
+/* Slideshow no lado direito */
+.slideshow-galeria {
+    position: relative;
+    flex: 1;
+    min-width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Fundo do slideshow */
+.slideshow-bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slideShow 15s infinite;
+}
+
+/* Gradiente por cima */
+.overlay-gradiente {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top right, rgba(6, 19, 58, 0.85), rgba(6, 19, 58, 0.3));
+    z-index: 1;
+}
+
+/* Botão da galeria */
+.btn-galeria {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
+    padding: 10px 25px;
+    border: 2px solid yellow;
+    color: yellow;
+    background: transparent;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.3s ease;
+}
+
+.btn-galeria:hover {
+    background-color: yellow;
+    color: #06133a;
+}
+
+/* Slideshow automático */
+@keyframes slideShow {
+    0%   { background-image: url('../img/Cobertura.jpg'); }
+    33%  { background-image: url('../img/CorrimãoAlumínio.jpg'); }
+    66%  { background-image: url('../img/CorrimãoAlumínio.jpg'); }
+    100% { background-image: url('../img/FechamentoSacada.jpg'); }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .container-galeria {
+        flex-direction: column;
+    }
+
+    .descricao-galeria, .slideshow-galeria {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}

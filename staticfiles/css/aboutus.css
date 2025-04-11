@@ -1,54 +1,117 @@
 /* Estilizando a seção Sobre Nós */
 .sobre-nos {
-    background-color: darkblue; /* Cor de fundo suave */
-    padding: 60px 20px;
-    margin-top: 60px; /* Para dar espaço após a navbar */
+    background: linear-gradient(180deg, rgba(0,0,0,1) 20%, hwb(225 0% 71%) 40%, rgba(0,94,187,1) 75%, rgba(248,248,255,1) 100%);
+    padding: 90px 5%;
 }
 
-.sobre-nos h2 {
-    font-size: 2.5rem;
-    color: yellow; /* Cor principal do texto */
-    font-weight: 300;
-    margin-bottom: 20px;
+/* Estilização do título "Quem Somos" */
+.sobre-nos .section-title {
+    font-size: 2.5rem; /* Mantém um tamanho grande */
+    color: yellow;
+    font-weight: 500;
+    margin-bottom: 40px;
+    text-align: left;
+    font-family: "Helvetica Neue", "Nunito Sans", sans-serif;
 }
 
-.sobre-nos h3 {
-    font-size: 2rem;
-    color: yellow; /* Cor dos subtítulos */
-    font-weight: 300;
-    margin-bottom: 15px;
-}
-
-.sobre-nos p {
-    font-size: 1.1rem;
-    color: #333;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.sobre-nos .container {
-    max-width: 1200px; /* Largura máxima para a seção */
-    margin: 0 auto; /* Alinha o conteúdo no centro */
-}
-
+/* Ajuste do layout para alinhar o texto "Quem Somos" à esquerda */
 .sobre-nos .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: yellow;
+    font-weight: 300;
+    font-size: 2rem; /* Mantém o tamanho da fonte proporcional */
     margin-bottom: 40px;
 }
 
-.sobre-nos .col-md-6 {
-    margin-bottom: 20px;
+/* Alinha o texto à esquerda e evita margens excessivas */
+.sobre-nos .col-lg-12 {
+    text-align: left;
+    max-width: 900px;
 }
 
+/* Container das caixas */
+.caixas-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    align-items: stretch; /* Mantém todas as caixas alinhadas */
+}
+
+/* Estilização das caixas de informação */
+.info-box {
+    background-color: yellow;
+    border-radius: 0px;
+    padding: 20px;
+    text-align: left;
+    color: #06133a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 300px;
+    flex-grow: 1; /* Faz com que todas as caixas cresçam igualmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 250px; /* Define uma altura mínima */
+    font-size: 2rem; /* Agora é compatível com "Quem Somos" */
+}
+
+/* Faz com que todas as caixas tenham a mesma altura da maior */
+.caixas-container {
+    display: flex;
+    align-items: stretch;
+}
+
+/* Estilização do título dentro das caixas */
+.info-box h3 {
+    font-size: 2rem; /* Mesma fonte da seção principal */
+    margin-bottom: 10px;
+}
+
+/* Estilização do texto dentro das caixas */
+.info-box p {
+    font-size: 1.8rem; /* Um pouco menor que o título, mas ainda proporcional */
+}
+
+/* Efeito ao passar o mouse sobre as caixas */
+.info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Ajustes para telas médias (tablets) */
+@media (max-width: 1024px) {
+    .caixas-container {
+        justify-content: center;
+    }
+
+    .info-box {
+        width: 45%;
+    }
+}
+
+/* Ajustes para telas pequenas (celulares) */
 @media (max-width: 768px) {
-    .sobre-nos h2 {
-        font-size: 2rem; /* Tamanho menor em telas pequenas */
+    .sobre-nos {
+        padding: 50px 5%;
     }
 
-    .sobre-nos h3 {
-        font-size: 1.6rem; /* Tamanho menor em telas pequenas */
+    .sobre-nos .row {
+        flex-direction: column;
+        text-align: left;
     }
 
-    .sobre-nos p {
-        font-size: 1rem; /* Tamanho menor em telas pequenas */
+    .caixas-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .info-box {
+        width: 100%;
+        margin-bottom: 20px;
     }
 }
