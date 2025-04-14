@@ -1,141 +1,157 @@
 /* Seção geral com altura mínima de viewport e flex */
 .galeria-section {
-    padding: 0;
-    background: linear-gradient(to bottom, ghostwhite, #06133a);
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    font-family: "Helvetica Neue", Helvetica, sans-serif;
+  padding: 0;
+  background: linear-gradient(to bottom, ghostwhite, #06133a);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
 /* Lado da Descrição (Esquerda) - atualizado */
 .galeria-descricao {
-    background: transparent;
-    color: #06133a;
-    padding: 40px 40px 20px; /* Menos padding no topo */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Alinha no topo */
-    align-items: flex-start;
-    font-family: "Helvetica Neue", Helvetica, sans-serif;
+  background: transparent;
+  padding: 40px 5% 20px !important;  /* <<< MEXA AQUI (no valor 5%) para o DESKTOP */
+  color: #06133a;
+  padding: 40px 40px 20px; /* Menos padding no topo */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Alinha no topo */
+  align-items: flex-start;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
 /* Título da Descrição */
 .galeria-descricao h2 {
-    font-size: 2.5rem; /* Igual ao Sobre Nós */
-    margin-bottom: 20px;
-    font-weight: 500;
-    justify-content: center;
-    text-align: center;
-    color: #06133a;
+  font-size: 2.5rem; /* Igual ao Sobre Nós */
+  margin-bottom: 20px;
+  font-weight: 500;
+  justify-content: center;
+  text-align: center;
+  color: #06133a;
 }
 
 /* Parágrafo da Descrição */
 .galeria-descricao p {
-    font-size: 2rem;
-    font-weight: 300;
-    color: #06133a;
-    line-height: 1.5;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #06133a;
+  line-height: 1.5;
 }
-
 
 /* Lado do Slideshow (Direita) com altura aumentada */
 .galeria-slideshow {
-    position: relative;
-    border-radius: 0;
-    overflow: hidden;
-    background-color: #333;
-    min-height: 70vh;
+  position: relative;
+  border-radius: 0;
+  overflow: hidden;
+  background-color: #333;
+  min-height: 70vh;
 }
 
 /* Div que contém o background animado */
 .slideshow-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    animation: slideShow 15s infinite;
-    z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: slideShow 15s infinite;
+  z-index: 1;
 }
 
 /* Overlay */
 .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top right, rgba(6, 19, 58, 0.85), rgba(6, 19, 58, 0.5));
-    z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top right,
+    rgba(6, 19, 58, 0.85),
+    rgba(6, 19, 58, 0.5)
+  );
+  z-index: 2;
 }
 
 /* Wrapper do Botão */
 .galeria-btn-wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
-    text-align: center;
-    padding: 0 15px;
-    width: 100%;
-    box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  text-align: center;
+  padding: 0 15px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Estilo do botão */
 .galeria-btn-wrapper .btn.btn.btn-outline-light {
-    border-radius: 0px;
-    padding: 12px 30px;
-    font-size: 1.5rem;
-    border-color: yellow;
-    color: yellow;
+  border-radius: 0px;
+  padding: 12px 30px;
+  font-size: 1.5rem;
+  border-color: yellow;
+  color: yellow;
 }
 
 .galeria-btn-wrapper .btn.btn-outline-light:hover {
-    background-color: #06133a; /* Fundo ao passar o mouse */
-    color: yellow;              /* Texto branco para contraste */
-    border-color: #06133a;
-    transform: scale(1.05);
+  background-color: #06133a; /* Fundo ao passar o mouse */
+  color: yellow; /* Texto branco para contraste */
+  border-color: #06133a;
+  transform: scale(1.05);
 }
 
 /* Animação Keyframes */
 @keyframes slideShow {
-    0%   { background-image: url('../img/Cobertura.jpg'); }
-    33%  { background-image: url('../img/CorrimãoAlumínio.jpg'); }
-    66%  { background-image: url('../img/CorrimãoAlumínio.jpg'); }
-    100% { background-image: url('../img/FechamentoSacada.jpg'); }
+  0% {
+    background-image: url("../img/Cobertura.jpg");
+  }
+  33% {
+    background-image: url("../img/CorrimãoAlumínio.jpg");
+  }
+  66% {
+    background-image: url("../img/CorrimãoAlumínio.jpg");
+  }
+  100% {
+    background-image: url("../img/FechamentoSacada.jpg");
+  }
 }
 
 /* Responsivo */
-@media (max-width: 767.98px) {
-    .galeria-section {
-        min-height: auto;
-    }
+@media (max-width: 768px) {
+  .galeria-section {
+    min-height: auto;
+  }
 
-    .galeria-descricao {
-        padding: 40px 20px;
-        text-align: center;
-    }
+  .galeria-descricao {
+    padding: 40px 5%; /* <<< MEXA AQUI (no valor 5%) para o MOBILE */
+  }
 
-    .galeria-descricao h2 {
-        font-size: 2.5rem;
-    }
+  .galeria-descricao h2 {
+    font-size: 2.5rem;
+    text-align: center; /* <<< ADICIONE: Centraliza APENAS o título */
+    width: 100%; /* Garante que o h2 ocupe a largura para centralizar o texto */
+  }
 
-    .galeria-descricao p {
-        font-size: 2rem;
-    }
+  .galeria-descricao p {
+    font-size: 2rem; /* Considerar reduzir um pouco a fonte no mobile */
+    text-align: left; /* <<< ADICIONE: Alinha APENAS o parágrafo à esquerda */
+    width: 100%; /* Garante que o parágrafo use a largura disponível */
+  }
 
-    .galeria-slideshow {
-        min-height: 400px; /* Altura reduzida no mobile para não exagerar */
-    }
+  .galeria-slideshow {
+    min-height: 400px; /* Altura reduzida no mobile para não exagerar */
+  }
 
-    .galeria-btn-wrapper .btn.btn-outline-light {
-        padding: 10px 25px;
-        font-size: 1.5rem;
-    }
+  /* Pequeno ajuste no seletor do botão para evitar especificidade excessiva */
+  .galeria-btn-wrapper .btn-outline-light {
+    padding: 10px 25px;
+    font-size: 2rem; /* Considerar reduzir um pouco a fonte no mobile */
+  }
 }
