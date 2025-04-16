@@ -15,7 +15,6 @@
   background: transparent;
   padding: 40px 5% 20px !important;  /* <<< MEXA AQUI (no valor 5%) para o DESKTOP */
   color: #06133a;
-  padding: 40px 40px 20px; /* Menos padding no topo */
   display: flex;
   flex-direction: column;
   justify-content: flex-start; /* Alinha no topo */
@@ -26,7 +25,6 @@
 /* Título da Descrição */
 .galeria-descricao h2 {
   font-size: 2.5rem; /* Igual ao Sobre Nós */
-  margin-bottom: 20px;
   font-weight: 500;
   justify-content: center;
   text-align: center;
@@ -125,10 +123,6 @@
 
 /* Responsivo */
 @media (max-width: 768px) {
-  .galeria-section {
-    min-height: auto;
-  }
-
   .galeria-descricao {
     padding: 40px 5%; /* <<< MEXA AQUI (no valor 5%) para o MOBILE */
   }
