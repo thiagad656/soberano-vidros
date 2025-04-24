@@ -1,101 +1,151 @@
-/* Container geral da galeria */
+/* Seção geral com altura mínima de viewport e flex */
 .galeria-section {
-    background: linear-gradient(to bottom, ghostwhite, #06133a); /* branco fantasma para azul escuro */
-    padding: 80px 5%;
+  padding: 0;
+  background: linear-gradient(to bottom, ghostwhite, #06133a);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
-.container-galeria {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: stretch;
+/* Lado da Descrição (Esquerda) - atualizado */
+.galeria-descricao {
+  background: transparent;
+  padding: 40px 5% 20px !important;  /* <<< MEXA AQUI (no valor 5%) para o DESKTOP */
+  color: #06133a;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Alinha no topo */
+  align-items: flex-start;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
-/* Descrição do lado esquerdo */
-.descricao-galeria {
-    flex: 1;
-    min-width: 300px;
-    color: #06133a;
-    padding-right: 30px;
+/* Título da Descrição */
+.galeria-descricao h2 {
+  font-size: 2.5rem; /* Igual ao Sobre Nós */
+  font-weight: 500;
+  justify-content: center;
+  text-align: center;
+  color: #06133a;
 }
 
-.descricao-galeria h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: yellow;
+/* Parágrafo da Descrição */
+.galeria-descricao p {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #06133a;
+  line-height: 1.5;
 }
 
-.descricao-galeria p {
-    font-size: 1.5rem;
-    color: #000;
+/* Lado do Slideshow (Direita) com altura aumentada */
+.galeria-slideshow {
+  position: relative;
+  border-radius: 0;
+  overflow: hidden;
+  background-color: #333;
+  min-height: 70vh;
 }
 
-/* Slideshow no lado direito */
-.slideshow-galeria {
-    position: relative;
-    flex: 1;
-    min-width: 300px;
-    height: 400px;
-    border-radius: 10px;
-    overflow: hidden;
+/* Div que contém o background animado */
+.slideshow-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: slideShow 15s infinite;
+  z-index: 1;
 }
 
-/* Fundo do slideshow */
-.slideshow-bg {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    animation: slideShow 15s infinite;
+/* Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top right,
+    rgba(6, 19, 58, 0.85),
+    rgba(6, 19, 58, 0.5)
+  );
+  z-index: 2;
 }
 
-/* Gradiente por cima */
-.overlay-gradiente {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top right, rgba(6, 19, 58, 0.85), rgba(6, 19, 58, 0.3));
-    z-index: 1;
+/* Wrapper do Botão */
+.galeria-btn-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  text-align: center;
+  padding: 0 15px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/* Botão da galeria */
-.btn-galeria {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    z-index: 2;
-    padding: 10px 25px;
-    border: 2px solid yellow;
-    color: yellow;
-    background: transparent;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: 0.3s ease;
+/* Estilo do botão */
+.galeria-btn-wrapper .btn.btn.btn-outline-light {
+  border-radius: 0px;
+  padding: 12px 30px;
+  font-size: 1.5rem;
+  border-color: yellow;
+  color: yellow;
 }
 
-.btn-galeria:hover {
-    background-color: yellow;
-    color: #06133a;
+.galeria-btn-wrapper .btn.btn-outline-light:hover {
+  background-color: #06133a; /* Fundo ao passar o mouse */
+  color: yellow; /* Texto branco para contraste */
+  border-color: #06133a;
+  transform: scale(1.05);
 }
 
-/* Slideshow automático */
+/* Animação Keyframes */
 @keyframes slideShow {
-    0%   { background-image: url('../img/Cobertura.jpg'); }
-    33%  { background-image: url('../img/CorrimãoAlumínio.jpg'); }
-    66%  { background-image: url('../img/CorrimãoAlumínio.jpg'); }
-    100% { background-image: url('../img/FechamentoSacada.jpg'); }
+  0% {
+    background-image: url("../img/Cobertura.jpg");
+  }
+  33% {
+    background-image: url("../img/CorrimãoAlumínio.jpg");
+  }
+  66% {
+    background-image: url("../img/CorrimãoAlumínio.jpg");
+  }
+  100% {
+    background-image: url("../img/FechamentoSacada.jpg");
+  }
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
-    .container-galeria {
-        flex-direction: column;
-    }
+  .galeria-descricao {
+    padding: 40px 5%; /* <<< MEXA AQUI (no valor 5%) para o MOBILE */
+  }
 
-    .descricao-galeria, .slideshow-galeria {
-        width: 100%;
-        margin-bottom: 30px;
-    }
+  .galeria-descricao h2 {
+    font-size: 2.5rem;
+    text-align: center; /* <<< ADICIONE: Centraliza APENAS o título */
+    width: 100%; /* Garante que o h2 ocupe a largura para centralizar o texto */
+  }
+
+  .galeria-descricao p {
+    font-size: 2rem; /* Considerar reduzir um pouco a fonte no mobile */
+    text-align: left; /* <<< ADICIONE: Alinha APENAS o parágrafo à esquerda */
+    width: 100%; /* Garante que o parágrafo use a largura disponível */
+  }
+
+  .galeria-slideshow {
+    min-height: 400px; /* Altura reduzida no mobile para não exagerar */
+  }
+
+  /* Pequeno ajuste no seletor do botão para evitar especificidade excessiva */
+  .galeria-btn-wrapper .btn-outline-light {
+    padding: 10px 25px;
+    font-size: 2rem; /* Considerar reduzir um pouco a fonte no mobile */
+  }
 }

@@ -1,0 +1,47 @@
+{% extends 'main.html' %} {% block content %}
+<section class="contato-section">
+  <div class="contato-container">
+    <!-- Coluna dos Contatos -->
+    <div class="contato-info">
+      <h2>Entre em Contato</h2>
+      <p>
+        Endereço Loja Fisíca: Av. Moacir da Silveira, 1175 Jd. Isaura - Santana
+        de Parnaíba - SP, CEP: 06516-050
+      </p>
+      <p>
+        Endereço Escritório: Est. São Francisco, S/N Jd. Wanda - Taboão da Serra
+        - SP, CEP: 06765-001
+      </p>
+      <p>Telefone: (00) 1234-5678</p>
+      <p>WhatsApp: (11) 2690-8086</p>
+      <p>E-mail 1: rafael@soberanovidros.com</p>
+      <p>E-mail 2: joao@soberanovidros.com</p>
+    </div>
+
+    <!-- Coluna do Formulário -->
+    <div class="contato-form">
+      <h2>Fale Conosco</h2>
+      <form action="#" method="post">
+        <input type="text" placeholder="Seu nome" required />
+        <input type="email" placeholder="Seu e-mail" required />
+        <textarea placeholder="Sua mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Mapa -->
+  <div class="mapa-container">
+    <h2>Visite nossa loja presencialmente!</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.440045059118!2d-46.894189!3d-23.480654499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf03330bc4f83d%3A0xb3f52c31cc9c9aa6!2sSoberano%20Vidros%20Ltda-ME!5e0!3m2!1spt-BR!2sbr!4v1742212641446!5m2!1spt-BR!2sbr"
+      width="100%"
+      height="500"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</section>
+{% endblock %}

@@ -1,10 +1,7 @@
 from django.urls import path
-from . import views  # Importa as views
+from . import views
 
 urlpatterns = [
-    path('', views.home, name='home'),  # Página inicial
-    # Adicione outras rotas, como para "Sobre", "Galeria" e "Contato"
-    path('sobre/', views.aboutus, name='sobre'),
-    path('galeria/', views.galery, name='galeria'),
-    path('contato/', views.contacts, name='contato'),
+    path('', views.home, name='home'),  # Página inicial com todas as seções
+    path('contato/', views.contacts, name='contacts'),  # Página de contato separada
 ]

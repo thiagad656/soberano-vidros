@@ -41,3 +41,10 @@
   font-weight: var(--font-weight-light);
   min-height: calc(100vh - 80px - 60px);
 }
+
+#sobre-nos,
+#contato,
+#galeria,
+#faq {
+  scroll-margin-top: 100px; /* ou o valor que quiser */
+}
