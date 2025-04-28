@@ -1,12 +1,12 @@
+from decouple import config
 from pathlib import Path
-import os
 
 # Caminho base do projeto
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Configurações de segurança
-SECRET_KEY = 'django-insecure-5#7y&w=ek4*6#-zii94r5o93pp$h1*1523lz1nrug@w2i^&yhe'
-DEBUG = True
+SECRET_KEY = config('SECRET_KEY')
+DEBUG = config('DEBUG', default=True, cast=bool)
 ALLOWED_HOSTS = []
 
 # Definição das aplicações instaladas
@@ -37,7 +37,7 @@ ROOT_URLCONF = 'soberano_vidros.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'app' / 'templates'],  # Alterado para apontar para a pasta 'app/templates'
+        'DIRS': [BASE_DIR / 'app' / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,7 +76,7 @@ STATIC_URL = '/static/'
 
 # Diretórios onde o Django buscará arquivos estáticos no desenvolvimento
 STATICFILES_DIRS = [
-    BASE_DIR / 'app' / 'static',  # Aponta para a pasta app/static
+    BASE_DIR / 'app' / 'static',
 ]
 
 # Diretório onde o Django coletará os arquivos estáticos para produção
@@ -85,3 +85,11 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Campo de chave primária
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Configuração do envio de e-mails
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')

@@ -21,15 +21,20 @@
     <!-- Coluna do Formulário -->
     <div class="contato-form">
       <h2>Fale Conosco</h2>
-      <form action="#" method="post">
-        <input type="text" placeholder="Seu nome" required />
-        <input type="email" placeholder="Seu e-mail" required />
-        <textarea placeholder="Sua mensagem" required></textarea>
-        <button type="submit">Enviar</button>
+      <form method="post" action="" id="contato-form">
+        {% csrf_token %}
+        <input type="text" name="nome" placeholder="Seu nome" required />
+        <input type="email" name="email" placeholder="Seu e-mail" required />
+        <textarea
+          name="mensagem"
+          placeholder="Sua mensagem"
+          required
+        ></textarea>
+        <button type="submit" class="btn-enviar">Enviar</button>
       </form>
     </div>
   </div>
-
+  
   <!-- Mapa -->
   <div class="mapa-container">
     <h2>Visite nossa loja presencialmente!</h2>
