@@ -1,0 +1,27 @@
+{% extends 'main.html' %} {% load static %} {% block content %}
+<section class="gallery-hybrid">
+  <!-- Mosaico em 3 Colunas -->
+  <div class="gallery-mosaic bg-black py-5">
+    <div class="container">
+      <h2 class="text-center mb-4 text-yellow">Nossos Trabalhos</h2>
+      <div class="row g-4">
+        {% for foto in fotos %}
+        <div class="col-md-4 gallery-item">
+          <div class="mosaic-item">
+            <img
+              src="{{ foto.imagem.url }}"
+              alt="{{ foto.titulo }}"
+              class="img-fluid"
+            />
+            <div class="mosaic-overlay">
+              <h3>{{ foto.titulo }}</h3>
+              <p>{{ foto.descricao|truncatechars:100 }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

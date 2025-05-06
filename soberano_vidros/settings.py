@@ -1,5 +1,6 @@
 from decouple import config
 from pathlib import Path
+import os  # necessário para MEDIA_ROOT
 
 # Caminho base do projeto
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -82,7 +83,6 @@ STATICFILES_DIRS = [
 # Diretório onde o Django coletará os arquivos estáticos para produção
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-
 # Campo de chave primária
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
@@ -93,3 +93,7 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+
+# >>> CONFIGURAÇÕES DE MÍDIA <<<
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

@@ -105,6 +105,42 @@
   transform: scale(1.05);
 }
 
+.gallery-grid {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.gallery-sizer,
+.gallery-item {
+  width: 33.33%; /* 3 colunas por padrão */
+}
+
+.gallery-item {
+  margin-bottom: 20px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .gallery-sizer,
+  .gallery-item {
+    width: 50%; /* 2 colunas em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-sizer,
+  .gallery-item {
+    width: 100%; /* 1 coluna em telas pequenas */
+  }
+}
+
+
 /* Animação Keyframes */
 @keyframes slideShow {
   0% {

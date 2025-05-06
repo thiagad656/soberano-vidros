@@ -12,8 +12,9 @@
             <div class="col-md-3">
                 <h5>Links</h5>
                 <ul class="footer-links">
-                    <li><a href="#sobre-nos">Sobre Nós</a></li>
-                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="{% url 'home' %}#sobre-nos">Sobre Nós</a></li>
+                    <li><a href="{% url 'galeria' %}">Galeria</a></li>
+                    <li><a href="{% url 'home' %}#faq">FAQ</a></li>
                     <li><a href="{% url 'contacts' %}">Contato</a></li>
                 </ul>
             </div>
