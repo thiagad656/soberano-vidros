@@ -36,6 +36,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
   gap: 8px;
   background-color: rgb(255, 255, 0); /* Cor de fundo preenchida */
   border: 2px solid rgb(255, 255, 0); /* Mantendo a borda com a mesma cor */
@@ -47,14 +48,14 @@
   font-size: 18px;
   transition: all var(--transition-speed) ease;
   width: 90%;
-  max-width: 500px;
+  max-width: 400px;
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   transform: scale(1);
   will-change: transform;
-  margin: 10px auto;
+  margin: 5px auto;
   box-sizing: border-box;
   text-shadow: none;
 }

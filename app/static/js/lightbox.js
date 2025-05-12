@@ -1,26 +1,42 @@
-document.querySelectorAll('.mosaic-item').forEach(item => {
-    item.addEventListener('click', function() {
-        const imgSrc = this.querySelector('img').src;
-        const imgAlt = this.querySelector('img').alt;
-        const description = this.querySelector('p').textContent;
-        
-        const lightbox = document.createElement('div');
-        lightbox.className = 'lightbox';
-        lightbox.innerHTML = `
-            <div class="lightbox-content">
-                <span class="close-btn">&times;</span>
-                <img src="${imgSrc}" alt="${imgAlt}">
-                <div class="lightbox-footer">
-                    <h3>${imgAlt}</h3>
-                    <p>${description}</p>
-                </div>
-            </div>
-        `;
-        
-        document.body.appendChild(lightbox);
-        
-        lightbox.querySelector('.close-btn').addEventListener('click', () => {
-            lightbox.remove();
-        });
+document.addEventListener("DOMContentLoaded", () => {
+    // Cria o elemento da lightbox
+    const lightbox = document.createElement("div");
+    lightbox.className = "lightbox";
+  
+    // Conteúdo interno da lightbox (imagem e botão de fechar)
+    lightbox.innerHTML = `
+      <span class="lightbox-close" aria-label="Fechar imagem">&times;</span>
+      <img src="" alt="Imagem ampliada" />
+    `;
+  
+    // Adiciona a lightbox ao final do body
+    document.body.appendChild(lightbox);
+  
+    const lightboxImage = lightbox.querySelector("img");
+    const closeButton = lightbox.querySelector(".lightbox-close");
+  
+    // Ativa a lightbox ao clicar em uma imagem com a classe .lightbox-trigger
+    document.querySelectorAll(".lightbox-trigger").forEach(link => {
+      link.addEventListener("click", event => {
+        event.preventDefault(); // Impede o redirecionamento
+        const imageUrl = link.getAttribute("href");
+        lightboxImage.src = imageUrl;
+        lightbox.style.display = "flex";
+      });
     });
-});
+  
+    // Fecha a lightbox ao clicar no botão de fechar
+    closeButton.addEventListener("click", () => {
+      lightbox.style.display = "none";
+      lightboxImage.src = ""; // Limpa a imagem ao fechar
+    });
+  
+    // Fecha a lightbox ao clicar fora da imagem
+    lightbox.addEventListener("click", event => {
+      if (event.target === lightbox) {
+        lightbox.style.display = "none";
+        lightboxImage.src = "";
+      }
+    });
+  });
+  

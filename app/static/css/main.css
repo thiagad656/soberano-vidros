@@ -12,8 +12,8 @@
 
 /* Seção Hero */
 .hero {
-  background: url("/static/img/Banner.jpeg") no-repeat center center/cover;
-  height: 80vh;
+  background: url("/static/img/Banner.jpg") no-repeat center center/cover;
+  height: 95vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,5 +46,5 @@
 #contato,
 #galeria,
 #faq {
-  scroll-margin-top: 100px; /* ou o valor que quiser */
+  scroll-margin-top: 100px;
 }

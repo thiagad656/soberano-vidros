@@ -1,117 +1,117 @@
 /* Estilizando a seção Sobre Nós */
 .sobre-nos {
-    background: linear-gradient(180deg, rgba(0,0,0,1) 20%, hwb(225 0% 71%) 40%, rgba(0,94,187,1) 75%, rgba(248,248,255,1) 100%);
-    padding: 90px 5%;
+  background: linear-gradient(
+    180deg,
+    #000000 20%,
+    hwb(225 0% 71%) 40%,
+    #005ebb 75%,
+    #f8f8ff 100%
+  );
+  padding: 90px 5%;
+  color: #f1f1f1;
+  font-family: "Helvetica Neue", "Nunito Sans", sans-serif;
 }
 
-/* Estilização do título "Quem Somos" */
+/* Título "Quem Somos" */
 .sobre-nos .section-title {
-    font-size: 2.5rem; /* Mantém um tamanho grande */
-    color: yellow;
-    font-weight: 500;
-    margin-bottom: 40px;
-    text-align: left;
-    font-family: "Helvetica Neue", "Nunito Sans", sans-serif;
+  font-size: 2.5rem;
+  color: yellow;
+  font-weight: 500px;
+  margin-bottom: 40px;
+  text-align: left;
 }
 
-/* Ajuste do layout para alinhar o texto "Quem Somos" à esquerda */
+/* Subtítulo opcional */
+.sobre-nos .section-subtitle {
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: whitesmoke;
+  margin-bottom: 40px;
+}
+
+/* Texto principal */
 .sobre-nos .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    color: yellow;
-    font-weight: 300;
-    font-size: 2rem; /* Mantém o tamanho da fonte proporcional */
-    margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
 }
 
-/* Alinha o texto à esquerda e evita margens excessivas */
+/* Ajusta largura do texto */
 .sobre-nos .col-lg-12 {
-    text-align: left;
-    max-width: 900px;
+  text-align: left;
+  max-width: 900px;
 }
 
 /* Container das caixas */
 .caixas-container {
-    display: flex;
-    justify-content: flex-start;
-    gap: 20px;
-    margin-top: 40px;
-    flex-wrap: wrap;
-    align-items: stretch; /* Mantém todas as caixas alinhadas */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: stretch; /* Garante alinhamento vertical */
 }
 
-/* Estilização das caixas de informação */
+/* Info boxes */
 .info-box {
-    background-color: yellow;
-    border-radius: 0px;
-    padding: 20px;
-    text-align: left;
-    color: #06133a;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    min-width: 300px;
-    flex-grow: 1; /* Faz com que todas as caixas cresçam igualmente */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 250px; /* Define uma altura mínima */
-    font-size: 2rem; /* Agora é compatível com "Quem Somos" */
+  background: linear-gradient(135deg, #002b50, #000000);
+  border: 1px solid #ffffff11;
+  border-radius: 0px;
+  padding: 25px;
+  color: yellow;
+  flex: 1 1 300px;
+  height: 100%; /* Garante que cresça igual */
+  min-height: 300px; /* Altura mínima para uniformidade */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-/* Faz com que todas as caixas tenham a mesma altura da maior */
-.caixas-container {
-    display: flex;
-    align-items: stretch;
-}
-
-/* Estilização do título dentro das caixas */
+/* Título dentro da caixa */
 .info-box h3 {
-    font-size: 2rem; /* Mesma fonte da seção principal */
-    margin-bottom: 10px;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
 }
 
-/* Estilização do texto dentro das caixas */
+/* Texto dentro da caixa */
 .info-box p {
-    font-size: 1.8rem; /* Um pouco menor que o título, mas ainda proporcional */
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: whitesmoke;
 }
 
-/* Efeito ao passar o mouse sobre as caixas */
+/* Hover */
 .info-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+  border-color: yellow;
 }
 
-/* Ajustes para telas médias (tablets) */
 @media (max-width: 1024px) {
-    .caixas-container {
-        justify-content: center;
-    }
+  .caixas-container {
+    justify-content: center;
+  }
 
-    .info-box {
-        width: 45%;
-    }
+  .info-box {
+    flex: 1 1 calc(50% - 20px);
+  }
 }
 
-/* Ajustes para telas pequenas (celulares) */
 @media (max-width: 768px) {
-    .sobre-nos {
-        padding: 50px 5%;
-    }
+  .caixas-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
 
-    .sobre-nos .row {
-        flex-direction: column;
-        text-align: left;
-    }
-
-    .caixas-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .info-box {
-        width: 100%;
-        margin-bottom: 20px;
-    }
+  .info-box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
