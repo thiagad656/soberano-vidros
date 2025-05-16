@@ -5,7 +5,7 @@
     #000000 20%,
     hwb(225 0% 71%) 40%,
     #005ebb 75%,
-    #f8f8ff 100%
+    #005ebb 100%
   );
   padding: 90px 5%;
   color: #f1f1f1;
@@ -21,14 +21,6 @@
   text-align: left;
 }
 
-/* Subtítulo opcional */
-.sobre-nos .section-subtitle {
-  font-size: 1.8rem;
-  font-weight: 300;
-  color: whitesmoke;
-  margin-bottom: 40px;
-}
-
 /* Texto principal */
 .sobre-nos .row {
   display: flex;
@@ -36,8 +28,8 @@
   justify-content: flex-start;
   align-items: flex-start;
   font-weight: 300;
-  font-size: 1.8rem;
-  line-height: 1.6;
+  font-size: 2rem;
+  line-height: 1.5;
   margin-bottom: 40px;
 }
 

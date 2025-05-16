@@ -7,11 +7,18 @@
         {% for foto in fotos %}
         <div class="col-md-4 gallery-item">
           <div class="mosaic-item">
-            <img
-              src="{{ foto.imagem.url }}"
-              alt="{{ foto.titulo }}"
-              class="img-fluid"
-            />
+            <a
+              href="{{ foto.imagem.url }}"
+              class="lightbox-trigger"
+              data-title="{{ foto.titulo }}"
+              data-description="{{ foto.descricao }}"
+            >
+              <img
+                src="{{ foto.imagem.url }}"
+                alt="{{ foto.titulo }}"
+                class="img-fluid"
+              />
+            </a>
             <div class="mosaic-overlay">
               <h3>{{ foto.titulo }}</h3>
               <p>{{ foto.descricao|truncatechars:100 }}</p>

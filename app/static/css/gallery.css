@@ -1,7 +1,7 @@
 /* Seção geral com altura mínima de viewport e flex */
 .galeria-section {
   padding: 0;
-  background: linear-gradient(to bottom, ghostwhite, #06133a);
+  background: linear-gradient(to bottom, #005ebb, #06133a);
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -29,14 +29,14 @@
   justify-content: center;
   margin-bottom: 20px;
   text-align: center;
-  color: #06133a;
+  color: yellow;
 }
 
 /* Parágrafo da Descrição */
 .galeria-descricao p {
   font-size: 2rem;
   font-weight: 300;
-  color: #06133a;
+  color: whitesmoke;
   line-height: 1.5;
 }
 

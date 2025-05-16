@@ -1,42 +1,47 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // Cria o elemento da lightbox
-    const lightbox = document.createElement("div");
-    lightbox.className = "lightbox";
-  
-    // Conteúdo interno da lightbox (imagem e botão de fechar)
-    lightbox.innerHTML = `
-      <span class="lightbox-close" aria-label="Fechar imagem">&times;</span>
-      <img src="" alt="Imagem ampliada" />
-    `;
-  
-    // Adiciona a lightbox ao final do body
-    document.body.appendChild(lightbox);
-  
-    const lightboxImage = lightbox.querySelector("img");
-    const closeButton = lightbox.querySelector(".lightbox-close");
-  
-    // Ativa a lightbox ao clicar em uma imagem com a classe .lightbox-trigger
-    document.querySelectorAll(".lightbox-trigger").forEach(link => {
-      link.addEventListener("click", event => {
-        event.preventDefault(); // Impede o redirecionamento
-        const imageUrl = link.getAttribute("href");
-        lightboxImage.src = imageUrl;
-        lightbox.style.display = "flex";
-      });
-    });
-  
-    // Fecha a lightbox ao clicar no botão de fechar
-    closeButton.addEventListener("click", () => {
-      lightbox.style.display = "none";
-      lightboxImage.src = ""; // Limpa a imagem ao fechar
-    });
-  
-    // Fecha a lightbox ao clicar fora da imagem
-    lightbox.addEventListener("click", event => {
-      if (event.target === lightbox) {
-        lightbox.style.display = "none";
-        lightboxImage.src = "";
-      }
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("Lightbox JS carregado");
+
+  const triggers = document.querySelectorAll(".lightbox-trigger");
+
+  // Cria a lightbox
+  const lightbox = document.createElement("div");
+  lightbox.classList.add("custom-lightbox");
+  lightbox.innerHTML = `
+    <div class="lightbox-content">
+      <span class="lightbox-close">&times;</span>
+      <img class="lightbox-img" src="" alt="">
+      <div class="lightbox-caption">
+        <h3 class="lightbox-title"></h3>
+        <p class="lightbox-desc"></p>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(lightbox);
+
+  const img = lightbox.querySelector(".lightbox-img");
+  const title = lightbox.querySelector(".lightbox-title");
+  const desc = lightbox.querySelector(".lightbox-desc");
+  const closeBtn = lightbox.querySelector(".lightbox-close");
+
+  triggers.forEach((trigger) => {
+    trigger.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      img.src = this.href;
+      title.textContent = this.dataset.title;
+      desc.textContent = this.dataset.description;
+
+      lightbox.classList.add("active");
     });
   });
-  
+
+  closeBtn.addEventListener("click", () => {
+    lightbox.classList.remove("active");
+  });
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.remove("active");
+    }
+  });
+});
