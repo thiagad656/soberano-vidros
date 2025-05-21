@@ -24,11 +24,24 @@
   font-weight: var(--font-weight-light);
 }
 
+/* Overlay azul escuro */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 18, 74, 0.5); /* Azul escuro com 40% de opacidade */
+}
+
 .hero-content {
-  color: rgb(255, 255, 0);
+  color: yellow;
   padding: 20px;
   border-radius: var(--border-radius);
   font-weight: var(--font-weight-light);
+  position: relative; /* Garante que o conteúdo fique acima do overlay */
+  z-index: 1;
 }
 
 .hero a {

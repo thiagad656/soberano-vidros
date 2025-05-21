@@ -2,9 +2,7 @@
 .sobre-nos {
   background: linear-gradient(
     180deg,
-    #000000 20%,
-    hwb(225 0% 71%) 40%,
-    #005ebb 75%,
+    rgb(0, 18, 74) 50%,
     #005ebb 100%
   );
   padding: 90px 5%;
