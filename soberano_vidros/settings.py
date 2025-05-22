@@ -1,6 +1,7 @@
 from decouple import config
 from pathlib import Path
 import os  # necessário para MEDIA_ROOT
+import re
 
 # Caminho base do projeto
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -8,7 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Configurações de segurança
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=True, cast=bool)
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Definição das aplicações instaladas
 INSTALLED_APPS = [
